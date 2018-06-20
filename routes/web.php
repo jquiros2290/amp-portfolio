@@ -14,3 +14,7 @@
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 Route::post('/contact', 'HomeController@submit_contact')->name('submit_contact');
+
+Route::get('/projects', 'HomeController@project_form');
+Route::post('/projects', 'HomeController@project_submit')->name('projects');
+
