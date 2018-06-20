@@ -8,7 +8,9 @@ use App\Project;
 class HomeController extends Controller
 {
     public function index(){
-    	return view('index');
+        $data['projects'] = Project::all();
+
+    	return view('index', $data);
     }
 
     public function contact(){
